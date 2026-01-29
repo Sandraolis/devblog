@@ -1,3 +1,5 @@
+require('dotenv').config();
+
 const createError = require("http-errors");
 const express = require("express");
 const path = require("path");
@@ -11,6 +13,7 @@ const connectToMongo = require("./utils/db");
 
 const app = express(); //Initialize express app
 
+console.log("mongo_url", process.env.MONGO_URL)
 connectToMongo(); //Database Connection
 
 // view engine setup
