@@ -12,8 +12,7 @@ const adminRouter = require("./routes/admin");
 const connectToMongo = require("./utils/db");
 
 const app = express(); //Initialize express app
-
-console.log("mongo_url", process.env.MONGO_URL)
+console.log("mongo_url", process.env.MONGO_URI)
 connectToMongo(); //Database Connection
 
 // view engine setup
