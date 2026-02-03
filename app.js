@@ -19,7 +19,6 @@ connectToMongo(); //Database Connection
 app.use(expressLayouts); //ejs layouts
 app.set("views", path.join(__dirname, "views")); //views directory
 app.set("view engine", "ejs"); //view engine
-
 app.use(logger("dev")); //logger for debuging requests
 
 // Middleware to parse incoming requests with JSON payloads
