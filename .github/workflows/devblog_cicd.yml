@@ -60,7 +60,7 @@ jobs:
         uses: actions/upload-artifact@v4
         with:
           name: vercel-artifact
-          path: ./.vercel
+          path: Atlas-Admin-Dashboard/.vercel
 
   deploy:
     needs: test-lint-build
@@ -73,7 +73,7 @@ jobs:
         uses: actions/download-artifact@v4
         with:
           name: vercel-artifact
-          path: ./.vercel
+          path: Atlas-Admin-Dashboard/.vercel
 
       - name: Install Vercel CLI
         run: npm install --global vercel@latest
