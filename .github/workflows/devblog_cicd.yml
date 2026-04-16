@@ -62,7 +62,7 @@ jobs:
         uses: actions/upload-artifact@v4
         with:
           name: vercel-artifact
-          path: devblog/.vercel
+          path: ${{ github.workspace }}/.vercel
 
   deploy:
     needs: test-lint-build
@@ -75,7 +75,7 @@ jobs:
         uses: actions/download-artifact@v4
         with:
           name: vercel-artifact
-          path: devblog/.vercel
+          path: ${{ github.workspace }}/.vercel
 
       - name: Install Vercel CLI
         run: npm install --global vercel@latest
