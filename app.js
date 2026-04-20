@@ -12,15 +12,13 @@ const adminRouter = require("./routes/admin");
 const connectToMongo = require("./utils/db");
 
 const app = express(); //Initialize express app
-
-console.log("mongo_url", process.env.MONGO_URL)
+console.log("mongo_url", process.env.MONGO_URI)
 connectToMongo(); //Database Connection
 
 // view engine setup
 app.use(expressLayouts); //ejs layouts
 app.set("views", path.join(__dirname, "views")); //views directory
 app.set("view engine", "ejs"); //view engine
-
 app.use(logger("dev")); //logger for debuging requests
 
 // Middleware to parse incoming requests with JSON payloads
