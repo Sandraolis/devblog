@@ -71,3 +71,4 @@ typings/
 *.tif
 *.tiff
 *.webp
+.vercel

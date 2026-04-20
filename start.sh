@@ -1,4 +1,4 @@
-#!/bin/bash
+#!/bin/sh
 
 # create ./public/images directory if it doesnt exit
 
